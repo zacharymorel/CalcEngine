@@ -3,13 +3,6 @@ package com.pluralsight.calcengine;
 public class Main {
 
     public static void main(String[] args) {
-        // TEST CODE FOR WHEN SOME ONE IS EXPLORING OUT CLASSES TO TEST AND SEE WHAT THEY DO.
-//        MathEquation testEquation = new MathEquation();
-//        testEquation.excute();
-//        System.out.print("test = ");
-//        System.out.println(testEquation.getResult());
-
-
          // This creates the Array it's self.
         MathEquation[] equations = new MathEquation[4];
         equations[0] = new MathEquation('d', 100.0d, 50.0d);
@@ -22,14 +15,24 @@ public class Main {
             System.out.println("the result = ");
             System.out.println(equation.getResult());
         }
-    }
 
-//    public static MathEquation create(double leftVal, double rightVal, char opCode) {
-//        MathEquation equation = new MathEquation();
-//        equation.setLeftVal(leftVal);
-//        equation.setRightVal(rightVal);
-//        equation.setOpCode(opCode);
-//
-//        return equation;
-//    }
+        System.out.println();
+        System.out.println("Using Overloads");
+        System.out.println();
+
+        double leftDouble = 9.0d;
+        double rightDouble = 4.0d;
+        int leftInt = 9;
+        int rightInt = 4;
+
+        MathEquation equationOverload = new MathEquation('d');
+
+        equationOverload.excute(leftDouble, rightDouble);
+        System.out.println("Result = ");
+        System.out.println(equationOverload.getResult());
+
+        equationOverload.excute(leftInt, rightInt);
+        System.out.println("Result = ");
+        System.out.println(equationOverload.getResult());
+    }
 }

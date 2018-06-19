@@ -46,6 +46,24 @@ public class MathEquation {
         this.rightVal = rightVal;
     }
 
+    //OVERLOADING
+    public void excute(double leftVal, double rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        excute();
+    }
+
+    public void excute(int leftVal, int rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        excute();
+        // CASTING 
+        result = (int)result;
+    }
+
+
     public void excute() {
         switch (opCode) {
             case 'a':
