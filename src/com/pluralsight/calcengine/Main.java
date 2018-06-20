@@ -12,7 +12,7 @@ public class Main {
 
         for(MathEquation equation: equations) {
             equation.excute();
-            System.out.println("the result = ");
+            System.out.print("the result = ");
             System.out.println(equation.getResult());
         }
 
@@ -28,11 +28,28 @@ public class Main {
         MathEquation equationOverload = new MathEquation('d');
 
         equationOverload.excute(leftDouble, rightDouble);
-        System.out.println("Result = ");
+        System.out.print("Result=");
         System.out.println(equationOverload.getResult());
 
         equationOverload.excute(leftInt, rightInt);
-        System.out.println("Result = ");
+        System.out.print("Result=");
         System.out.println(equationOverload.getResult());
+
+        System.out.println();
+        System.out.print("Using Inheritance");
+        System.out.println();
+
+        CalculateBase[] calulators = {
+                new Divider(100.0d, 50.0d),
+                new Adder(25.0d, 92.0d),
+                new Subtracter(225.0d, 17.0d),
+                new Multiplier(11.0d, 3.0d)
+        };
+
+        for(CalculateBase calculator: calulators) {
+            calculator.calculate();
+            System.out.print("result=");
+            System.out.println(calculator.getResult());
+        }
     }
 }
