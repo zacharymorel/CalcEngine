@@ -6,6 +6,7 @@ public class MathEquation {
     private char opCode = 'a';
     private double result;
 
+    // GETTERS SETTERS
     public double getLeftVal() {
         return leftVal;
     }
@@ -34,6 +35,7 @@ public class MathEquation {
         return result;
     }
 
+    // CONSTRUCTORS
     public MathEquation() {}
 
     public MathEquation(char opcode) {
@@ -59,7 +61,7 @@ public class MathEquation {
         this.rightVal = rightVal;
 
         excute();
-        // CASTING 
+        // CASTING
         result = (int)result;
     }
 
